@@ -26,7 +26,8 @@ class TweetsController < ApplicationController
   
   def update
     @tweet.update(tweets_params)
-    redirect_to tweets_path
+    
+    redirect_to tweets_path,notice: "Tweetを編集しました！"
   end
   
   def destroy
